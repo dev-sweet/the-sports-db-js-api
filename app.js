@@ -11,6 +11,8 @@ const loadTeams = () =>{
 }
 const displayTeams = teams =>{
     const teamsContainer = document.getElementById('teams');
+    // clear previous team container 
+    teamsContainer.textContent ='';
     teams.forEach(team => {
         const div = document.createElement('div');
         div.classList.add('col-4');
@@ -38,7 +40,7 @@ const displayTeamDetails= team =>{
     <div class="w-50 mx-auto">
                 <img class="w-25 d-block mx-auto mb-4" src="${team.strTeamBadge}"
                         alt="">
-                    <p>${team.name}</p>
+                    <h3>${team.strTeam}</h3>
                 <div class="row">
                     <div class="col-md-4">
                         <p><strong>Team Jersey : </strong></p>
